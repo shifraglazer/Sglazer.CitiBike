@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099ccff"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="picture"
+        tools:text="MAP" />
+
+    <TextView
+        android:id="@+id/stationName"
+        style="@style/StationInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:background="#2528ff"
+        android:foreground="#0099ccff"
+        android:nestedScrollingEnabled="false"
+        android:textAlignment="center"
+        android:textColor="#c3ffffff"
+
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:text="NAME" />
+
+
+    <GridLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="false"
+        android:background="#ffffff"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+
+        <ImageView
+            android:id="@+id/dockIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="false"
+            android:contentDescription="dockIcon"
+            android:scaleType="fitXY"
+            tools:text="dock"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/availableDocks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            tools:text="AVAILABLE DOCKS"
+            android:layout_gravity="center_horizontal" />
+
+
+        <ImageView
+            android:id="@+id/bikeIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="bikeIcon"
+            android:scaleType="fitXY"
+            tools:text="bikeIcon"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/availableBikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            tools:text="AVAILABLE BIKES"
+            android:layout_gravity="center_horizontal" />
+
+
+        <ImageView
+            android:id="@+id/distanceIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="distanceIcon"
+            android:scaleType="fitXY"
+            tools:text="distanceIcon"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            tools:text="DISTANCE"
+            android:layout_gravity="center_horizontal" />
+
+
+    </GridLayout>
+
+
+</RelativeLayout>

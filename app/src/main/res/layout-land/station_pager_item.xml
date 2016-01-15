@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099ccff"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:text="MAP" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/stationName"
+            style="@style/StationInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout"
+            android:layout_centerHorizontal="true"
+            android:background="#2528ff"
+            android:foreground="#0099ccff"
+            android:textAlignment="center"
+            android:textColor="#c3ffffff"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            tools:text="NAME" />
+
+        <GridLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/dockIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:contentDescription="dockIcon"
+                android:scaleType="fitXY"
+                tools:text="dock" />
+
+            <TextView
+                android:id="@+id/availableDocks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                tools:text="AVAILABLE DOCKS" />
+
+
+            <ImageView
+                android:id="@+id/bikeIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:contentDescription="bikeIcon"
+                android:scaleType="fitXY"
+                tools:text="bikeIcon" />
+
+            <TextView
+                android:id="@+id/availableBikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                tools:text="AVAILABLE BIKES" />
+
+
+            <ImageView
+                android:id="@+id/distanceIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:contentDescription="distanceIcon"
+                android:scaleType="fitXY"
+                tools:text="distanceIcon" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                tools:text="DISTANCE" />
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>
