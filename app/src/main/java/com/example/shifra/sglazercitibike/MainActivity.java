@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements OnStationSelected
     protected void onResume() {
         super.onResume();
         location.setQuery(preferences.getString("ADDRESS", ""), true);
+        listFragment.setCloseStations(preferences.getString("MAP URL", ""));
     }
 
     @Override
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements OnStationSelected
         super.onPause();
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("ADDRESS", location.getQuery().toString());
+        editor.putString("MAP URL", listFragment.getCloseStations());
         editor.apply();
     }
 
